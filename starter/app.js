@@ -2,10 +2,10 @@
 // It will be reset each time the quiz starts
 // keys used (hover over, value is number)
 const scoreKeeper = {
-    dog: 0,
-    cat: 0,
-    parrot: 0,
-    turtle: 0,
+    Point: 0,
+    Shooting: 0,
+    Forward: 0,
+    Center: 0,
 };
 
 let currentQuestionIndex = 0; // Programming languages start counting at zero
@@ -19,66 +19,66 @@ let currentQuestionIndex = 0; // Programming languages start counting at zero
 // each option is its own object {} with two properties: text and point
 const questions = [
     {
-        text: 'What are you most likely to be doing at a party?',
+        text: 'What are you most likely to do in a 5v5?',
         options: [
             {
-                text: 'Playing games and making new friends',
-                point: 'dog',
+                text: 'Look to execute the ball and get people open',
+                point: 'Point',
             },
             {
-                text: 'Watching from a corner, hoping someone interesting shows up',
-                point: 'cat',
+                text: 'Post in a corner waiting for a shot',
+                point: 'Shooting',
             },
             {
-                text: 'Partying! Dressed up, chatting it up, dancing... maybe a little loud',
-                point: 'parrot',
+                text: 'Looking to grab rebounds',
+                point: 'Center',
             },
             {
-                text: 'I would help set up beforehand and make sure everything goes smoothly',
-                point: 'turtle',
+                text: 'Play Defense (Hack)',
+                point: 'Forward',
             },
         ],
     },
     {
-        text: 'How would you prefer to unwind?',
+        text: 'What kind of play do you prefer to run?',
         options: [
             {
-                text: 'Take a walk outside',
-                point: 'dog',
+                text: 'Shooting',
+                point: 'Shooting',
             },
             {
-                text: 'Lie out in the sun',
-                point: 'cat',
+                text: 'Pick n\' Roll',
+                point: 'Point',
             },
             {
-                text: 'Go window shopping',
-                point: 'parrot',
+                text: 'Posting Up',
+                point: 'Center',
             },
             {
-                text: 'Sit at home and do nothing',
-                point: 'turtle',
+                text: 'Pick n\' Pop',
+                point: 'Forward',
             },
         ],
     },
     {
-        text: 'How do you deal with stress?',
+        text: 'Whats your attitude during the game?',
         options: [
             {
-                text: 'Exercise',
-                point: 'dog',
+                text: 'Aggresive',
+                point: 'Forward',
             },
             {
-                text: 'Tell someone off',
-                point: 'cat',
+                text: 'Passive',
+                point: 'Center',
             },
             {
                 // inside a string, you have to escape quote marks with a \
-                text: 'Share how I\'m feeling',
-                point: 'parrot',
+                text: 'Non-Chalant',
+                point: 'Shooting',
             },
             {
-                text: 'Have some alone time',
-                point: 'turtle',
+                text: 'Vocal',
+                point: 'Point',
             },
         ],
     },
@@ -86,42 +86,42 @@ const questions = [
         text: 'What sounds like the most fun to you?',
         options: [
             {
-                text: 'Playing sports or videogames with friends',
-                point: 'dog',
+                text: 'Good Clip',
+                point: 'Shooting',
             },
             {
-                text: 'Reading a book',
-                point: 'cat',
+                text: 'Crossover',
+                point: 'Point',
             },
             {
-                text: 'Just hanging out and talking with friends',
-                point: 'parrot',
+                text: 'Dunking',
+                point: 'Forward',
             },
             {
-                text: 'Making things, or cleaning the house',
-                point: 'turtle',
+                text: 'Hook-Shots',
+                point: 'Center',
             },
         ],
     },
     {
-        text: 'What do you look for in a friend?',
+        text: 'What would you want to do as a game winning bucket?',
         options: [
             {
-                text: 'Someone who is fun and energetic',
-                point: 'dog',
+                text: 'Half Court heave',
+                point: 'Forward',
             },
             {
-                text: 'Someone who can be both quiet and playful',
-                point: 'cat',
+                text: 'Side step three',
+                point: 'Point',
             },
             {
-                text: 'Someone who I can share my secrets with',
-                point: 'parrot',
+                text: 'Deep Fadeaway',
+                point: 'Shooting',
             },
             {
                 // inside a string, you have to escape quote marks with a \
-                text: 'Someone who doesn\'t have too many emotions',
-                point: 'turtle',
+                text: '360 Windmill Dunk',
+                point: 'Center',
             },
         ],
     },
